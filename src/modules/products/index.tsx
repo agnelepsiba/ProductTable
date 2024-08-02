@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState, AppDispatch } from '../../redux/store'; // Adjust the path as needed
-import { setProductList, setSearchProducts, setSelectedProduct, setProductReviews } from '../../redux/productSlice'; // Adjust the path as needed
+import { RootState, AppDispatch } from '../../redux/store';
+import { setProductList, setSearchProducts, setSelectedProduct, setProductReviews } from '../../redux/productSlice'; 
 import styles from './product.module.scss';
 import axios from 'axios';
 import { Col, Pagination, Rate, Row, Modal } from 'antd';

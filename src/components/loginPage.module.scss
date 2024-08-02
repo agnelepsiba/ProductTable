@@ -1,0 +1,107 @@
+@import '../styles/variable.scss';
+
+$primary-color: #6c757d; 
+$primary-dark: #5a6268; 
+$error-color: #dc3545;
+$border-color: #dcdcdc; 
+$background-color: #f8f9fa; 
+$input-background: #e9ecef; 
+$box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+$border-radius: 8px;
+
+.logincontainer {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    background-color: $background-color;
+    box-shadow: $box-shadow;
+    box-sizing: border-box;
+
+    // Heading Styles
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 26px;
+        color: #333;
+        font-weight: 600;
+    }
+
+    // Form Styles
+    form {
+        display: flex;
+        flex-direction: column;
+
+       
+        .label {
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+            font-size: 14px;
+            margin-right: 274px;
+            display: block;
+        }
+
+       
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            border: 1px solid $border-color;
+            border-radius: $border-radius;
+            background-color: $input-background;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+
+            &:focus {
+                border-color: $primary-color;
+                outline: none;
+            }
+        }
+
+        
+        .buttonlogin {
+            background-color: $primary-color;
+            color: #fff;
+            border: 1px solid $border-color;
+            padding: 12px;
+            border-radius: $border-radius;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+            width: 100%;
+            margin-top: 20px; 
+
+            &:hover {
+                background-color: $primary-dark;
+                color: #fff;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &:disabled {
+                background-color: #c0c0c0;
+                cursor: not-allowed;
+                color: #666;
+            }
+        }
+
+       
+        .errors {
+            color: $error-color;
+            font-size: 14px;
+            margin: -10px 0px 0;
+            text-align: left;
+        }
+
+    }
+
+    @include big5 {
+        max-width: 90%; 
+        margin: 20px auto;
+    }
+}
